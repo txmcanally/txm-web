@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -33,14 +33,26 @@
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#games">Games</a>
-        <a href="/ringblast3d/support/">Support</a>
-        <a href="mailto:hello@txm-games.com">Contact</a>
+        <a href="/support/">Support</a>
       </nav>
     </div>
   </header>
 
   <!-- ── Hero ─────────────────────────────────────────────────────────── -->
   <section class="hero">
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="ring-stage">
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+        <div class="ring ring-3"></div>
+        <div class="ring ring-core"></div>
+        <span class="ring-block"></span>
+        <span class="ring-block"></span>
+        <span class="ring-block"></span>
+      </div>
+    </div>
+
     <div class="container hero-inner">
       <img
         src="/assets/dark/txm-logo-dark-640.png"
@@ -49,40 +61,41 @@
         width="320"
         height="150"
       />
-      <h1 class="hero-headline">Games worth<br />another round.</h1>
+      <h1 class="hero-headline">Games worth<br /><span>another round.</span></h1>
       <p class="hero-sub">
-        TXM Games builds approachable, polished puzzle experiences —
-        starting with Ring Blast 3D, a cylindrical twist on classic falling-block gameplay.
+        Approachable, polished puzzle experiences — starting with Ring Blast 3D,
+        a cylindrical twist on classic falling-block gameplay.
       </p>
-      <a href="#games" class="btn-primary">Our games</a>
+      <a href="#games" class="btn-primary">Play the lineup</a>
     </div>
   </section>
 
   <!-- ── Games ────────────────────────────────────────────────────────── -->
-  <section class="businesses" id="games">
+  <section class="games" id="games">
     <div class="container">
-      <h2 class="section-label">Games</h2>
+      <p class="section-kicker">The lineup</p>
+      <h2 class="section-title">Puzzle games built for one more try.</h2>
 
-      <div class="business-grid">
-
-        <!-- Ring Blast 3D -->
-        <article class="business-card">
-          <div class="business-card-logo">
-            <strong style="font-size:1.25rem;letter-spacing:-0.02em;">Ring Blast 3D</strong>
-          </div>
-          <p class="business-card-desc">
-            A cylindrical Tetris-style puzzle game. Rotate the ring, clear full rings,
-            and chase high scores with bombs and rising speed.
+      <a class="game-spotlight" href="/ringblast3d/" aria-label="Ring Blast 3D">
+        <div class="game-art" aria-hidden="true">
+          <div class="game-art-rings"></div>
+          <span class="game-art-label">Ring Blast 3D</span>
+        </div>
+        <div class="game-copy">
+          <span class="game-status">Available on App Store</span>
+          <h3 class="game-name">Ring Blast 3D</h3>
+          <p class="game-desc">
+            Rotate the cylinder, clear full rings, and chase high scores with bombs
+            and rising speed — Tetris energy in the round.
           </p>
-          <a href="/ringblast3d/" class="business-card-link">
+          <span class="game-cta">
             View game
             <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M3 11L11 3M11 3H6M11 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-          </a>
-        </article>
-
-      </div>
+          </span>
+        </div>
+      </a>
     </div>
   </section>
 
