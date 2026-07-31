@@ -11,6 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a { color: inherit; }
+
 /* ── Layout ──────────────────────────────────────────────────────────── */
 
 .container {
@@ -118,6 +120,25 @@ body {
   transform: translateY(-1px);
 }
 
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  color: var(--txm-color-warm-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: var(--txm-space-3) var(--txm-space-6);
+  border: 1px solid rgba(246,244,238,.24);
+  border-radius: var(--txm-radius-md);
+  margin-top: var(--txm-space-4);
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.btn-secondary:hover {
+  background: rgba(246,244,238,.08);
+  border-color: rgba(246,244,238,.45);
+}
+
 /* ── Businesses ──────────────────────────────────────────────────────── */
 
 .businesses {
@@ -189,6 +210,137 @@ body {
 
 .business-card-link:hover { color: #245872; }
 
+/* ── Game pages ─────────────────────────────────────────────────────── */
+
+.game-hero {
+  background: var(--txm-color-dark-bg);
+  color: var(--txm-color-warm-white);
+  padding-block: var(--txm-space-20);
+}
+
+.game-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .6fr);
+  gap: var(--txm-space-12);
+  align-items: center;
+}
+
+.game-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--txm-space-5);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--txm-color-copper);
+}
+
+.game-hero h1,
+.legal-content h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.game-hero p {
+  max-width: 620px;
+  color: rgba(246,244,238,.72);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--txm-space-3);
+}
+
+.game-hero-art {
+  display: flex;
+  justify-content: center;
+}
+
+.game-hero-art img {
+  display: block;
+  width: min(100%, 256px);
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+
+.content-section,
+.legal-page {
+  padding-block: var(--txm-space-20);
+}
+
+.split-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr);
+  gap: var(--txm-space-10);
+  align-items: start;
+}
+
+.split-content h2,
+.legal-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: var(--txm-space-4);
+}
+
+.split-content p,
+.legal-content p,
+.legal-content li {
+  color: var(--txm-color-ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.feature-list,
+.legal-content ul {
+  padding-left: var(--txm-space-6);
+}
+
+.feature-list {
+  background: var(--txm-color-surface);
+  border: 1px solid var(--txm-color-line);
+  border-radius: var(--txm-radius-lg);
+  box-shadow: var(--txm-shadow-card);
+  padding: var(--txm-space-8) var(--txm-space-8) var(--txm-space-8) var(--txm-space-10);
+}
+
+.feature-list li + li,
+.legal-content li + li {
+  margin-top: var(--txm-space-2);
+}
+
+.legal-content {
+  max-width: 760px;
+}
+
+.legal-content .updated {
+  color: var(--txm-color-muted);
+  margin-top: var(--txm-space-2);
+}
+
+.legal-content p,
+.legal-content ul {
+  margin-top: var(--txm-space-4);
+}
+
+.legal-content h2 {
+  margin-top: var(--txm-space-10);
+}
+
+.legal-content a {
+  color: var(--txm-color-blue);
+  font-weight: 600;
+}
+
 /* ── Footer ──────────────────────────────────────────────────────────── */
 
 .site-footer {
@@ -214,6 +366,20 @@ body {
   color: rgba(246,244,238,.45);
 }
 
+.footer-links {
+  display: flex;
+  gap: var(--txm-space-4);
+  margin-left: auto;
+}
+
+.footer-links a {
+  color: rgba(246,244,238,.55);
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover { color: var(--txm-color-warm-white); }
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 
 @media (max-width: 600px) {
@@ -229,5 +395,28 @@ body {
 
   .business-grid { grid-template-columns: 1fr; }
 
+  .game-hero { padding-block: var(--txm-space-14); }
+
+  .game-hero-inner,
+  .split-content {
+    grid-template-columns: 1fr;
+  }
+
+  .game-hero-art {
+    justify-content: flex-start;
+  }
+
+  .game-hero-art img {
+    width: 156px;
+    border-radius: 18px;
+  }
+
+  .content-section,
+  .legal-page {
+    padding-block: var(--txm-space-12);
+  }
+
   .footer-inner { flex-direction: column; align-items: flex-start; }
+
+  .footer-links { margin-left: 0; }
 }
