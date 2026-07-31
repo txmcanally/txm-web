@@ -642,6 +642,141 @@ a { color: inherit; }
   margin-top: var(--txm-space-2);
 }
 
+/* ── Game pages ─────────────────────────────────────────────────────── */
+
+.game-hero {
+  background:
+    radial-gradient(ellipse 70% 50% at 70% 20%, rgba(46, 230, 197, 0.16), transparent 58%),
+    linear-gradient(160deg, var(--txm-color-void) 0%, var(--txm-color-panel) 100%);
+  color: var(--txm-color-mint);
+  padding-block: var(--txm-space-20);
+}
+
+.game-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(220px, .6fr);
+  gap: var(--txm-space-12);
+  align-items: center;
+}
+
+.game-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--txm-space-5);
+}
+
+.eyebrow {
+  font-family: var(--txm-font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--txm-color-lime);
+}
+
+.game-hero h1,
+.legal-content h1 {
+  font-family: var(--txm-font-display);
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.game-hero p {
+  max-width: 620px;
+  color: rgba(231, 246, 239, 0.72);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--txm-space-3);
+}
+
+.game-hero-art {
+  display: flex;
+  justify-content: center;
+}
+
+.game-hero-art img {
+  display: block;
+  width: min(100%, 256px);
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.content-section,
+.legal-page {
+  padding-block: var(--txm-space-20);
+}
+
+.split-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr);
+  gap: var(--txm-space-10);
+  align-items: start;
+}
+
+.split-content h2,
+.legal-content h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: var(--txm-space-4);
+}
+
+.split-content p,
+.legal-content p,
+.legal-content li {
+  color: var(--txm-color-ink);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.feature-list,
+.legal-content ul {
+  padding-left: var(--txm-space-6);
+}
+
+.feature-list {
+  background: var(--txm-color-surface);
+  border: 1px solid var(--txm-color-line);
+  border-radius: var(--txm-radius-lg);
+  box-shadow: var(--txm-shadow-card);
+  padding: var(--txm-space-8) var(--txm-space-8) var(--txm-space-8) var(--txm-space-10);
+}
+
+.feature-list li + li,
+.legal-content li + li {
+  margin-top: var(--txm-space-2);
+}
+
+.legal-content {
+  max-width: 760px;
+}
+
+.legal-content .updated {
+  color: var(--txm-color-muted);
+  margin-top: var(--txm-space-2);
+}
+
+.legal-content p,
+.legal-content ul {
+  margin-top: var(--txm-space-4);
+}
+
+.legal-content h2 {
+  margin-top: var(--txm-space-10);
+}
+
+.legal-content a {
+  color: var(--txm-color-lime-deep);
+  font-weight: 600;
+}
+
 /* ── Footer ──────────────────────────────────────────────────────────── */
 
 .site-footer {
@@ -710,6 +845,21 @@ a { color: inherit; }
   }
 }
 
+.footer-links {
+  display: flex;
+  gap: var(--txm-space-4);
+  margin-left: auto;
+}
+
+.footer-links a {
+  color: rgba(231, 246, 239, 0.55);
+  font-size: 0.8125rem;
+  text-decoration: none;
+  font-family: var(--txm-font-display);
+}
+
+.footer-links a:hover { color: var(--txm-color-lime); }
+
 /* ── Responsive ──────────────────────────────────────────────────────── */
 
 @media (max-width: 800px) {
@@ -754,12 +904,32 @@ a { color: inherit; }
 
   .support-page { padding-block: var(--txm-space-12) var(--txm-space-16); }
 
+  .game-hero { padding-block: var(--txm-space-14); }
+
+  .game-hero-inner,
+  .split-content {
+    grid-template-columns: 1fr;
+  }
+
+  .game-hero-art {
+    justify-content: flex-start;
+  }
+
+  .game-hero-art img {
+    width: 156px;
+    border-radius: 18px;
+  }
+
+  .content-section,
+  .legal-page {
+    padding-block: var(--txm-space-12);
+  }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+
+  .footer-links { margin-left: 0; }
+
   .form-row { grid-template-columns: 1fr; }
 
   .btn-submit { width: 100%; justify-content: center; }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
