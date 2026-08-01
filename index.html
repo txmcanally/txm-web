@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TXM Games</title>
-  <meta name="description" content="TXM Games — playful 3D puzzle games from Texas." />
+  <meta name="description" content="TXM Games is the game division of TXMcanally, LLC, building sharp, replayable puzzle games." />
 
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon/favicon-32.png" type="image/png" sizes="32x32" />
@@ -12,110 +12,75 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-
-  <!-- ── Nav ─────────────────────────────────────────────────────────── -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo-link" aria-label="TXM Games home">
-        <img
-          src="/assets/light/txm-logo-light-320.png"
-          alt="TXM Games"
-          class="site-logo"
-          width="160"
-          height="75"
-        />
+        <img src="/assets/dark/txm-logo-dark-320.png" alt="TXM Games" class="site-logo" width="88" height="41" />
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#games">Games</a>
+        <a href="/#games">Games</a>
         <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <!-- ── Hero ─────────────────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-grid"></div>
-      <div class="ring-stage">
-        <div class="ring ring-1"></div>
-        <div class="ring ring-2"></div>
-        <div class="ring ring-3"></div>
-        <div class="ring ring-core"></div>
-        <span class="ring-block"></span>
-        <span class="ring-block"></span>
-        <span class="ring-block"></span>
+  <main>
+    <section class="hero hero-studio">
+      <div class="atmosphere" aria-hidden="true"></div>
+      <div class="hero-studio-inner hero-copy">
+        <p class="studio-mark">Game division of TXMcanally, LLC</p>
+        <h1 class="hero-headline">TXM Games</h1>
+        <p class="hero-sub">
+          We make polished mobile games — sharp mechanics, short sessions,
+          and high-score loops players come back for.
+        </p>
+        <div class="hero-actions">
+          <a href="#games" class="btn-primary">View games</a>
+          <a href="mailto:hello@txm-games.com" class="btn-secondary">Contact</a>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="container hero-inner">
-      <img
-        src="/assets/dark/txm-logo-dark-640.png"
-        alt="TXM Games"
-        class="hero-logo"
-        width="320"
-        height="150"
-      />
-      <h1 class="hero-headline">Games worth<br /><span>another round.</span></h1>
-      <p class="hero-sub">
-        Approachable, polished puzzle experiences — starting with Ring Blast 3D,
-        a cylindrical twist on classic falling-block gameplay.
-      </p>
-      <a href="#games" class="btn-primary">Play the lineup</a>
-    </div>
-  </section>
+    <section class="businesses" id="games">
+      <div class="container">
+        <p class="section-kicker">Games</p>
+        <h2 class="section-heading">Our titles</h2>
 
-  <!-- ── Games ────────────────────────────────────────────────────────── -->
-  <section class="games" id="games">
-    <div class="container">
-      <p class="section-kicker">The lineup</p>
-      <h2 class="section-title">Puzzle games built for one more try.</h2>
-
-      <a class="game-spotlight" href="/ringblast3d/" aria-label="Ring Blast 3D">
-        <div class="game-art" aria-hidden="true">
-          <div class="game-art-rings"></div>
-          <span class="game-art-label">Ring Blast 3D</span>
+        <div class="business-grid">
+          <article class="business-card">
+            <div class="business-card-logo">
+              <img src="/assets/ringblast3d/app-icon.png" alt="" width="56" height="56" />
+            </div>
+            <div>
+              <h3>Ring Blast 3D</h3>
+              <p class="business-card-desc">
+                Cylindrical falling-block puzzle for iPhone — Android coming soon.
+              </p>
+            </div>
+            <a href="/ringblast3d/" class="business-card-link">View game</a>
+          </article>
         </div>
-        <div class="game-copy">
-          <span class="game-status">Available on App Store</span>
-          <h3 class="game-name">Ring Blast 3D</h3>
-          <p class="game-desc">
-            Rotate the cylinder, clear full rings, and chase high scores with bombs
-            and rising speed — Tetris energy in the round.
-          </p>
-          <span class="game-cta">
-            View game
-            <svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 11L11 3M11 3H6M11 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>
-      </a>
-    </div>
-  </section>
+      </div>
+    </section>
+  </main>
 
-  <!-- ── Footer ────────────────────────────────────────────────────────── -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <img
-        src="/assets/light/txm-logo-light-160.png"
-        alt="TXM Games"
-        class="footer-logo"
-        width="80"
-        height="38"
-      />
-      <p class="footer-copy">&copy; 2026 TXM Games. All rights reserved.</p>
+      <img src="/assets/dark/txm-logo-dark-160.png" alt="TXM Games" class="footer-logo" width="60" height="28" />
+      <p class="footer-copy">&copy; 2026 TXMcanally, LLC. TXM Games is the game division of TXMcanally, LLC.</p>
       <nav class="footer-links" aria-label="Footer">
-        <a href="/ringblast3d/privacy/">Privacy</a>
-        <a href="/ringblast3d/support/">Support</a>
+        <a href="/#games">Games</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
       </nav>
     </div>
   </footer>
-
 </body>
 </html>

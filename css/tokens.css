@@ -1,54 +1,27 @@
-/* TXM Games — Design Tokens
-   Arcade / puzzle-studio palette (distinct from TXMcanally corporate).
-   VOID      #07110e
-   PANEL     #0f1c17
-   MINT      #e7f6ef
-   LIME      #b8ff3c
-   CYAN      #2ee6c5
-   CORAL     #ff5c4d
-   INK       #0a1612
-*/
+/* TXM Games — mobile-game studio tokens */
 
 :root {
-  /* Brand palette */
-  --txm-color-void:        #07110e;
-  --txm-color-panel:       #0f1c17;
-  --txm-color-panel-2:     #152820;
-  --txm-color-mint:        #e7f6ef;
-  --txm-color-surface:     #f3fbf7;
-  --txm-color-ink:         #0a1612;
-  --txm-color-lime:        #b8ff3c;
-  --txm-color-lime-deep:   #8fd610;
-  --txm-color-cyan:        #2ee6c5;
-  --txm-color-coral:       #ff5c4d;
-  --txm-color-muted:       #5a7468;
-  --txm-color-line:        #c5ddd0;
-  --txm-color-fog:         rgba(231, 246, 239, 0.72);
-
-  /* Typography */
-  --txm-font-display: "Oxanium", ui-sans-serif, system-ui, sans-serif;
-  --txm-font-body: "Sora", ui-sans-serif, system-ui, sans-serif;
-
-  /* Scale */
-  --txm-space-1:  4px;
-  --txm-space-2:  8px;
-  --txm-space-3:  12px;
-  --txm-space-4:  16px;
-  --txm-space-5:  20px;
-  --txm-space-6:  24px;
-  --txm-space-8:  32px;
-  --txm-space-10: 40px;
-  --txm-space-12: 48px;
-  --txm-space-16: 64px;
-  --txm-space-20: 80px;
-  --txm-space-24: 96px;
-
-  /* Radius */
-  --txm-radius-sm: 6px;
-  --txm-radius-md: 10px;
-  --txm-radius-lg: 18px;
-
-  /* Motion */
-  --txm-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  --txm-ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --txm-bg: #05060a;
+  --txm-bg-elevated: #0b0d14;
+  --txm-surface: #10131c;
+  --txm-surface-2: #161a26;
+  --txm-ink: #f7f9fc;
+  --txm-muted: #c2c9d6;
+  --txm-subtle: #8b93a5;
+  --txm-line: rgba(255, 255, 255, 0.08);
+  --txm-line-strong: rgba(255, 255, 255, 0.16);
+  --txm-navy: #030409;
+  --txm-cyan: #3cefff;
+  --txm-magenta: #ff3db5;
+  --txm-violet: #7b5cff;
+  --txm-accent: linear-gradient(105deg, var(--txm-cyan) 0%, var(--txm-violet) 48%, var(--txm-magenta) 100%);
+  --txm-font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --txm-font-ui: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --txm-radius-sm: 10px;
+  --txm-radius: 14px;
+  --txm-radius-lg: 22px;
+  --txm-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --txm-glow: 0 0 40px rgba(60, 239, 255, 0.18);
+  --txm-header-h: 56px;
+  --txm-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
