@@ -714,6 +714,63 @@ button.btn-secondary {
 .footer-links a { color: rgba(255, 255, 255, 0.55); }
 .footer-links a:hover { color: #fff; }
 
+/* ── Consent banner ─────────────────────────────────── */
+
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  max-width: 34rem;
+  margin-inline: auto;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--txm-line-strong);
+  border-radius: var(--txm-radius);
+  background: rgba(16, 19, 28, 0.96);
+  box-shadow: var(--txm-shadow);
+  backdrop-filter: blur(16px);
+  animation: rise 0.35s var(--txm-ease) both;
+}
+
+.consent-banner.is-hiding {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s var(--txm-ease), transform 0.2s var(--txm-ease);
+}
+
+.consent-banner-inner {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.consent-banner p {
+  margin: 0;
+  color: var(--txm-muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.consent-banner a {
+  color: var(--txm-cyan);
+  font-weight: 600;
+  text-underline-offset: 2px;
+}
+
+.consent-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: flex-end;
+}
+
+.consent-banner-actions .btn-primary,
+.consent-banner-actions .btn-secondary {
+  min-height: 2.35rem;
+  padding: 0 0.95rem;
+  font-size: 0.72rem;
+}
+
 /* ── Motion ─────────────────────────────────────────── */
 
 @keyframes rise {
