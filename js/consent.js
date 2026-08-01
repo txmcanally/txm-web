@@ -49,14 +49,14 @@
     banner.className = "consent-banner";
     banner.setAttribute("role", "dialog");
     banner.setAttribute("aria-live", "polite");
-    banner.setAttribute("aria-label", "Cookie consent");
+    banner.setAttribute("aria-label", "Cookie notice");
     banner.innerHTML =
       '<div class="consent-banner-inner">' +
-      "<p>We use cookies for Google Analytics to understand site traffic. " +
+      "<p>We use Google Analytics to understand site traffic. Analytics is on by default. " +
       'See our <a href="/privacy/">privacy policy</a>.</p>' +
       '<div class="consent-banner-actions">' +
-      '<button type="button" class="btn-secondary" data-consent="decline">Decline</button>' +
-      '<button type="button" class="btn-primary" data-consent="accept">Accept</button>' +
+      '<button type="button" class="btn-secondary" data-consent="decline">Opt out</button>' +
+      '<button type="button" class="btn-primary" data-consent="accept">Got it</button>' +
       "</div></div>";
 
     document.body.appendChild(banner);
@@ -66,7 +66,7 @@
       if (!button) return;
 
       var choice = button.getAttribute("data-consent");
-      var accepted = choice === "accept";
+      var accepted = choice !== "decline";
       saveChoice(accepted ? "accepted" : "declined");
       applyConsent(accepted);
       hideBanner(banner);
@@ -76,17 +76,17 @@
   function init() {
     var choice = readChoice();
 
-    if (choice === "accepted") {
-      applyConsent(true);
-      return;
-    }
-
     if (choice === "declined") {
       applyConsent(false);
       return;
     }
 
-    showBanner();
+    // Opt-out model: analytics runs unless the visitor has declined.
+    applyConsent(true);
+
+    if (choice !== "accepted") {
+      showBanner();
+    }
   }
 
   if (document.readyState === "loading") {
