@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support — TXM Games</title>
-  <meta name="description" content="Submit a support request to TXM Games for help with Ring Blast 3D and other titles." />
+  <meta name="description" content="Get support for TXM Games titles." />
 
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
   <link rel="icon" href="/assets/favicon/favicon-32.png" type="image/png" sizes="32x32" />
@@ -12,157 +12,54 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Sora:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="/css/tokens.css" />
   <link rel="stylesheet" href="/css/style.css" />
 </head>
-<body class="page-inner">
-
+<body>
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo-link" aria-label="TXM Games home">
-        <img
-          src="/assets/light/txm-logo-light-320.png"
-          alt="TXM Games"
-          class="site-logo"
-          width="160"
-          height="75"
-        />
+        <img src="/assets/dark/txm-logo-dark-320.png" alt="TXM Games" class="site-logo" width="88" height="41" />
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="/#games">Games</a>
         <a href="/support/" aria-current="page">Support</a>
+        <a href="/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
 
-  <main class="support-page">
-    <div class="container support-layout">
-      <header class="support-intro">
-        <p class="section-kicker">Player support</p>
-        <h1 class="support-title">Need a hand?</h1>
-        <p class="support-lead">
-          Tell us what is going on and we will get back to you. Bug reports, account
-          questions, and feedback are all welcome.
-        </p>
-        <p class="support-email-note">
-          Prefer email?
-          <a href="mailto:support@txm-games.com">support@txm-games.com</a>
-        </p>
-      </header>
+  <main class="legal-page">
+    <article class="legal-content legal-card">
+      <p class="eyebrow">TXM Games</p>
+      <h1><span class="gradient-text">Support</span></h1>
+      <p>
+        Questions, bugs, or feedback? Email us at
+        <a href="mailto:support@txm-games.com">support@txm-games.com</a>.
+      </p>
 
-      <div class="support-panel">
-        <form
-          id="support-form"
-          class="support-form"
-          novalidate
-          data-support-email="support@txm-games.com"
-        >
-          <div class="form-row">
-            <div class="form-field">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" />
-            </div>
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required maxlength="200" />
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-field">
-              <label for="game">Game</label>
-              <select id="game" name="game" required>
-                <option value="" disabled selected>Select a game</option>
-                <option value="Ring Blast 3D">Ring Blast 3D</option>
-                <option value="General / website">General / website</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="category">Category</label>
-              <select id="category" name="category" required>
-                <option value="" disabled selected>Select a category</option>
-                <option value="Bug report">Bug report</option>
-                <option value="Gameplay help">Gameplay help</option>
-                <option value="Account / purchases">Account / purchases</option>
-                <option value="Feedback">Feedback</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="platform">Platform <span class="optional">(optional)</span></label>
-            <select id="platform" name="platform">
-              <option value="">Not sure / N/A</option>
-              <option value="iOS">iOS</option>
-              <option value="Android">Android</option>
-              <option value="Web">Web</option>
-              <option value="PC">PC</option>
-              <option value="Console">Console</option>
-            </select>
-          </div>
-
-          <div class="form-field">
-            <label for="subject">Subject</label>
-            <input id="subject" name="subject" type="text" required maxlength="160" placeholder="Short summary of the issue" />
-          </div>
-
-          <div class="form-field">
-            <label for="message">Details</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              maxlength="5000"
-              rows="7"
-              placeholder="What happened? Steps to reproduce, device info, and screenshots via email help a lot."
-            ></textarea>
-          </div>
-
-          <p class="form-error" id="form-error" hidden role="alert"></p>
-
-          <button type="submit" class="btn-primary btn-submit">
-            Submit request
-          </button>
-
-          <p class="form-hint">
-            Submitting opens your email app with a ready-to-send message to
-            support@txm-games.com.
-          </p>
-        </form>
-
-        <div class="support-success" id="support-success" hidden tabindex="-1">
-          <p class="section-kicker">Request ready</p>
-          <h2 class="support-success-title">Almost there</h2>
-          <p class="support-success-body">
-            Your email app should open with the support request filled in.
-            Send that message and we’ll take it from there.
-          </p>
-          <div class="support-success-actions">
-            <a class="btn-primary" id="support-mailto-link" href="mailto:support@txm-games.com">Open email again</a>
-            <button type="button" class="btn-secondary" id="support-reset">Submit another</button>
-          </div>
-        </div>
-      </div>
-    </div>
+      <h2>Helpful details to include</h2>
+      <ul>
+        <li>Which game you are playing</li>
+        <li>Your device model and OS version</li>
+        <li>The app version, if you know it</li>
+        <li>A short description of what happened</li>
+      </ul>
+    </article>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <img
-        src="/assets/light/txm-logo-light-160.png"
-        alt="TXM Games"
-        class="footer-logo"
-        width="80"
-        height="38"
-      />
-      <p class="footer-copy">&copy; 2026 TXM Games. All rights reserved.</p>
+      <img src="/assets/dark/txm-logo-dark-160.png" alt="TXM Games" class="footer-logo" width="60" height="28" />
+      <p class="footer-copy">&copy; 2026 TXMcanally, LLC. TXM Games is the game division of TXMcanally, LLC.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/#games">Games</a>
+        <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
     </div>
   </footer>
-
-  <script src="/js/support.js" defer></script>
 </body>
 </html>
